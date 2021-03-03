@@ -1,0 +1,178 @@
+ <!-- <div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+      <form (ngSubmit)="onSubmit()" [formGroup]="originForm">
+
+        <div formGroupName="userData">
+          <div class="form-group">
+            <label for="sender">Sender of the Package</label>
+            <input
+              formControlName="sender"
+              type="text"
+              id="sender"
+              class="form-control">
+            <div *ngIf="!fUser.controls.sender.valid && fUser.controls.sender.touched" class="alert-danger help-block">
+              <div *ngIf="fUser.controls.sender.errors.required" class="alert-danger pd5">
+                FirstName is required
+              </div>
+            </div>
+  
+            
+          </div>
+          <div class="form-group">
+            <label for="nameSender">First Name</label>
+            <input
+              formControlName="nameSender"
+              placeholder="First Name"
+              type="text"
+              id="nameSender"
+              class="form-control">
+            <div *ngIf="!fUser.controls.nameSender.valid && fUser.controls.nameSender.touched" class="alert-danger help-block">
+              <div *ngIf="fUser.controls.nameSender.errors.required" class="alert-danger pd5">
+                FirstName is required
+              </div>
+
+              <span *ngIf="fUser.controls.nameSender.errors.nameIsForbidden">This name is Forbidden</span>
+            </div>
+  
+            
+          </div>
+  
+          <div class="form-group">
+            <label for="lastNameSender">Last Name</label>
+            <input
+              formControlName="lastNameSender"
+              type="text"
+              id="lastNameSender"
+              class="form-control">
+            <div *ngIf="!fUser.controls.lastNameSender.valid && fUser.controls.lastNameSender.touched" class="alert-danger help-block">
+              <div *ngIf="fUser.controls.lastNameSender.errors.required" class="alert-danger pd5">
+                Last name is required
+              </div>
+            </div>
+          </div>
+  
+          <div class="form-group">
+            <label for="email">email Sender</label>
+            <input
+              formControlName="emailSender"
+              type="email"
+              id="emailSender"
+              class="form-control">
+              <div *ngIf="!fUser.controls.emailSender.valid && fUser.controls.emailSender.touched">
+                  <div *ngIf="fUser.controls.emailSender.errors.required" class="alert-danger">
+                    Email is required
+                  </div>
+                  <div *ngIf="fUser.controls.emailSender.errors.email" class="alert-danger">
+                    This is not an email
+                  </div>
+              </div>
+          </div>
+  
+          <div class="form-group">
+            <label for="phoneSender">phone Sender</label>
+            <input
+              formControlName="phoneSender"
+              type="number"
+              id="phoneSender"
+              class="form-control">
+              <div *ngIf="!fUser.controls.phoneSender.valid && fUser.controls.phoneSender.touched">
+                  <div *ngIf="fUser.controls.phoneSender.errors.required" class="alert-danger pd5">
+                    Phone is required
+                  </div>
+                  <div *ngIf="fUser.controls.phoneSender.errors.minlength || fUser.controls.phoneSender.errors.maxlength" class="alert-danger help-block">
+                    Min Length: {{fUser.controls.phoneSender.errors.minlength.requiredLength}}
+                    Max Length: {{fUser.controls.phoneSender.errors.maxlength.requiredLength}}
+  
+                  </div>
+  
+              </div>
+          </div>
+        </div>
+
+
+        <div formGroupName="originData">
+          <div class="form-group">
+            <label for="addressOrigin">Address Origin</label>
+            <input
+              formControlName="addressOrigin"
+              type="text"
+              id="addressOrigin"
+              class="form-control">
+              <div *ngIf="!fOrigin.controls.addressOrigin.valid && fOrigin.controls.addressOrigin.touched">
+                  <div *ngIf="fOrigin.controls.addressOrigin.errors.required" class="alert-danger pd5">
+                    Address is required
+                  </div>
+  
+              </div>
+          </div>
+  
+          <div class="form-group">
+            <label for="numberOrigin">Origin Number</label>
+            <input
+              formControlName="numberOrigin"
+              type="number"
+              id="numberOrigin"
+              class="form-control">
+              <div *ngIf="!fOrigin.controls.numberOrigin.valid && fOrigin.controls.numberOrigin.touched">
+                  <div *ngIf="fOrigin.controls.numberOrigin.errors.required" class="alert-danger pd5">
+                    Number is required
+                  </div>
+  
+              </div>
+          </div>
+  
+          <div class="form-group">
+            <label for="codePostalOrigin">Orign CP</label>
+            <input
+              formControlName="codePostalOrigin"
+              type="number"
+              id="codePostalOrigin"
+              class="form-control">
+              <div *ngIf="!fOrigin.controls.codePostalOrigin.valid && fOrigin.controls.codePostalOrigin.touched">
+                  <div *ngIf="fOrigin.controls.codePostalOrigin.errors.required" class="alert-danger pd5">
+                    CP is required
+                  </div>
+  
+              </div>
+          </div>
+
+          <div class="form-group">
+            <select formControlName="country" name="country" id="country">
+              <option *ngFor="let country of countries" value="{{country}}">{{country}}</option>
+            </select>
+          </div>
+        </div>
+
+        <div  formArrayName="comments">
+          <h4>Comentarios</h4>
+          <button 
+            class="btn btn-default" 
+            type="button"
+            (click)="onAddComment()">Add Comment</button>
+            <div class="form-group"
+            *ngFor="let commentControl of originForm.get('comments').controls; let i = index">
+              <input type="text" id="comments" class="form-control" [formControlName]="i">
+            </div>
+        </div>
+
+
+
+        
+
+
+
+
+        <button  class="btn btn-primary" type="submit">Submit</button>
+      </form>
+    </div>
+    <div class="col-md-6" *ngIf="formJson">
+      <pre class="align-items-center dark-bg text-light">{{formJson | json}}</pre>
+    </div>
+  </div>
+ 
+   
+
+</div>  -->
+
+<test-rform></test-rform>
